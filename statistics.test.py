@@ -17,7 +17,7 @@ class StatsAlerter:
   def checkAndAlert(self,data):
     for i in data:
       if i >= self.maxThreshold:
-        self.emailAlert.emailAlert = True
+        self.emailAlert.emailSent = True
         self.ledAlert.ledGlows = True
 
 class StatsTest(unittest.TestCase):
