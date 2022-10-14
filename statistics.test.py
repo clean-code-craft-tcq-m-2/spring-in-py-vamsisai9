@@ -1,5 +1,6 @@
 import unittest
 import statistics
+import math
 class EmailAlert:
   def __init__(self):
     self.emailSent = False
@@ -34,6 +35,9 @@ class StatsTest(unittest.TestCase):
     # nan (not-a-number), as defined in the math package
     # Design the assert here.
     # Use nan and isnan in https://docs.python.org/3/library/math.html
+    self.assertTrue(math.isNan(computedStats["avg"]))
+    self.assertTrue(math.isNan(computedStats["max"]))
+    self.assertTrue(math.isNan(computedStats["min"]))
 
   def test_raise_alerts_when_max_above_threshold(self):
     emailAlert = EmailAlert()

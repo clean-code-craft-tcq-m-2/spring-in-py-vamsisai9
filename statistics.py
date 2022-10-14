@@ -1,8 +1,10 @@
 
+
+import math
 def calculateStats(numbers):
-  numAvg = None
-  numMax = None
-  numMin = None
+  numAvg = math.nan
+  numMax = math.nan
+  numMin = math.nan
 
   if len(numbers)>0:
     numAvg = sum(numbers)/len(numbers)
